@@ -18,7 +18,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 //import { Ionicons } from "@expo/vector-icons";
 import Header from './Header'
 
-const Home =()=>{
+const Home =({navigation})=>{
     return(
         
         <ScrollView >
@@ -27,11 +27,18 @@ const Home =()=>{
                 <Text style={styles.title}>Categories</Text>
                 <View style={styles.category}>
                     <View style ={styles.house}>
-                        <Image 
+
+                    <TouchableOpacity  onPress={() => navigation.navigate("Houses")}>
+                    <Image 
                             source={require('../assets/categori/1.png')}
                             style={styles.anhcategory}
                         />
-                        <Text style={{textAlign:'center'}}>Houses</Text>
+                    
+                  </TouchableOpacity>
+
+
+                        
+                    
                     </View>
 
                     <View style ={styles.house}>
@@ -39,7 +46,7 @@ const Home =()=>{
                             source={require('../assets/categori/2.png')}
                             style={styles.anhcategory}
                         />
-                        <Text style={{textAlign:'center'}}>Apartments</Text>
+                      
                     </View>
 
                     <View style ={styles.house}>
@@ -47,7 +54,7 @@ const Home =()=>{
                             source={require('../assets/categori/1.png')}
                             style={styles.anhcategory}
                         />
-                        <Text style={{textAlign:'center'}}>Condos</Text>
+                     
                     </View>
                 </View>
 

@@ -24,7 +24,7 @@ const Header = () => {
                 </TouchableOpacity>
             </View>
         </View>
-    )
-}
+    
+    )}
 
 export default Header;
